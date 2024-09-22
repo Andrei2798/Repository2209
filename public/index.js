@@ -5,12 +5,12 @@ async function add(event)
     console.log(item);
 
     try {
-        const response = await fetch('/number', {
+        const response = await fetch('/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ number: numberToSend })
+            body: JSON.stringify({  item })
         });
 
         if (!response.ok) {
@@ -18,10 +18,10 @@ async function add(event)
         }
 
         const data = await response.json();
-        let newData = JSON.stringify(data);
+        
          
-        document.querySelector("#digitMessage").style.color="green";
-        document.querySelector("#digitMessage").innerHTML = `Response from server is ${data.number}`
+        document.querySelector("#arrMessage").style.color="green";
+        document.querySelector("#arrMessage").innerHTML = `Response from server is ${data.number}`
     } catch (error) {
         console.error('Error:', error);
     }

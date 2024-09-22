@@ -9,6 +9,20 @@ app.use(express.json());
 let goods=[];
 
 
+app.post('/add', (req, res) => {
+  try{const good =req.body;
+    console.log(good);
+    goods.push(good);
+    console.log(goods);
+    res.json({goods })}
+       
+       catch (error) {
+        console.error('Error in /number route:', error.message);
+        res.status(400).json({ error: error.message });
+      }
+});
+
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
