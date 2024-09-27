@@ -21,7 +21,7 @@ async function add(event)
         
          
         document.querySelector("#arrMessage").style.color="green";
-        document.querySelector("#arrMessage").innerHTML = `Response from server is ${data.number}`
+        document.querySelector("#arrMessage").innerHTML = `Response from server: ${JSON.stringify(data.result, null, 2)}`;
     } catch (error) {
         console.error('Error:', error);
     }

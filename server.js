@@ -14,7 +14,9 @@ app.post('/add', (req, res) => {
     console.log(good);
     goods.push(good);
     console.log(goods);
-    res.json({goods })}
+    let result=goods;
+    console.log("Goods array: " + JSON.stringify(goods, null, 2))
+    res.json({result})}
        
        catch (error) {
         console.error('Error in /number route:', error.message);
