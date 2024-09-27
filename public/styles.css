@@ -1,29 +1,57 @@
-header
-{
+/* Стиль для хедера */
+header {
     height: 30px;
     background-color: yellow;
-
 }
 
-main{
+/* Основное содержимое страницы */
+main {
     display: flex;
-    gap: 30px;
+    background-color: silver;
+    flex-direction: column; /* Колонки внутри main */
+    gap: 20px;
 }
 
-form{
+/* Контейнер для форм, чтобы разместить их на одной линии */
+.form-container {
+    display: flex;
+    gap: 30px; /* Отступы между формами */
+}
+
+/* Стиль для формы */
+form {
     display: flex;
     flex-direction: column;
-    color:antiquewhite
+    color: antiquewhite;
+    width: 200px; /* Ограничиваем ширину форм */
 }
 
-.seller
-{
-    color:rgb(209, 19, 19);
+/* Стиль для секции продавца */
+.seller {
+    color: rgb(209, 19, 19);
     background-color: greenyellow;
 }
 
-.customer
-{
+/* Стиль для секции покупателя */
+.customer {
     background-color: rgb(50, 50, 143);
+}
 
+/* Стиль для arrMessage */
+#arrMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: black;
+}
+
+/* Стиль для футера */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
 }
